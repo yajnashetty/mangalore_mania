@@ -1,0 +1,191 @@
+/* General & Body Styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  z-index: -1;
+}
+
+/* Header & Navigation */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffe082;
+}
+.logo {
+  height: 60px;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  text-align: center;
+}
+nav a {
+  margin: 0 20px;
+  color: #ffeb3b;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ffd54f;
+  text-decoration: underline;
+}
+
+/* General Section & Card Styles */
+.section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+.section h2 {
+  color: #fff176;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.section p {
+  color: #fffde7;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(255, 235, 59, 0.5);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+.card h3 {
+  color: #ffeb3b;
+  margin-top: 0;
+}
+.card p {
+  color: #fffde7;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Homepage Hero */
+.hero {
+  padding: 140px 20px 120px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+}
+.typed-text {
+  font-size: 1.4rem;
+  color: #fffde7;
+  height: 40px;
+  margin-top: 20px;
+}
+.hero button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #ffca28;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+.hero button:hover {
+  background-color: #ffd54f;
+}
+
+/* Chatbot Widget */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#chatbot-header {
+  background: #ffe082;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+#chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+#chatbot-input {
+  border: none;
+  border-top: 1px solid #444;
+  background: #212121;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff;
+  margin-top: 40px;
+}
